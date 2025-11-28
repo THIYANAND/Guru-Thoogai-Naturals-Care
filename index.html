@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru Thoogai Naturals Care - Organic Sanitary Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #f7d347;
+            --secondary: #4a8b3c;
+            --accent: #d93c43;
+            --light: #fff4ce;
+            --dark: #333;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: var(--primary);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .logo-text h1 {
+            font-size: 20px;
+            letter-spacing: 1.5px;
+            color: var(--dark);
+        }
+
+        .logo-text p {
+            font-size: 11px;
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin: 0 12px;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: var(--dark);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(rgba(255, 244, 206, 0.9), rgba(255, 244, 206, 0.9)), url('coverImage.png');
+            background-size:contain;
+            background-position: center;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hero p {
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--accent);
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: var(--transition);
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(217, 60, 67, 0.3);
+        }
+
+        .btn:hover {
+            background: #b72e36;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(217, 60, 67, 0.4);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            color: var(--secondary);
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about, .contact {
+            padding: 60px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about ul {
+            list-style-type: none;
+            margin-top: 20px;
+        }
+
+        .about li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .about li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .products {
+            padding: 60px 20px;
+            background-color: var(--light);
+        }
+
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            padding: 20px;
+            border-radius: 15px;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: var(--secondary);
+        }
+
+        .product-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            margin: 15px 0;
+            font-weight: bold;
+            color: var(--accent);
+            font-size: 16px;
+        }
+
+        .product-card .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .features {
+            padding: 60px 20px;
+            background-color: var(--white);
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 25px 15px;
+            border-radius: 10px;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 35px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+            font-size: 18px;
+        }
+
+        /* ENHANCED CONTACT SECTION */
+        .contact {
+            background-color: var(--light);
+            padding: 80px 20px;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+        }
+
+        .contact-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .contact-card h3 {
+            color: var(--secondary);
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .contact-details {
+            text-align: center;
+        }
+
+        .contact-details p {
+            margin-bottom: 10px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .contact-details a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 18px;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .contact-details a:hover {
+            color: #b72e36;
+            text-decoration: underline;
+        }
+
+        .delivery-info {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .delivery-info h3 {
+            color: var(--secondary);
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .delivery-info p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .delivery-note {
+            background: #f0f7f0;
+            border-left: 4px solid var(--secondary);
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .delivery-note p {
+            color: var(--secondary);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .header-container {
+                padding: 0 15px;
+            }
+            
+            nav li {
+                margin: 0 10px;
+            }
+            
+            nav a {
+                font-size: 14px;
+            }
+            
+            .hero h2 {
+                font-size: 28px;
+            }
+            
+            .section-title h2 {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px 15px;
+            }
+            
+            .logo-container {
+                gap: 10px;
+            }
+            
+            .logo-img {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .logo-text h1 {
+                font-size: 18px;
+            }
+            
+            .logo-text p {
+                font-size: 10px;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                z-index: 999;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav li {
+                margin: 10px 0;
+            }
+            
+            nav a {
+                font-size: 16px;
+                display: block;
+                padding: 10px;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero {
+                padding: 60px 15px;
+            }
+            
+            .hero h2 {
+                font-size: 26px;
+            }
+            
+            .hero p {
+                font-size: 15px;
+            }
+            
+            .btn {
+                padding: 10px 25px;
+                font-size: 15px;
+            }
+            
+            .about-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .about-text {
+                text-align: center;
+            }
+            
+            .section-title h2 {
+                font-size: 24px;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+            
+            .product-card {
+                padding: 15px;
+            }
+            
+            .product-card img {
+                height: 180px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            /* Contact Section Mobile */
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .contact-card {
+                padding: 25px 20px;
+            }
+            
+            .delivery-info {
+                padding: 25px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-container {
+                flex-direction: column;
+                gap: 5px;
+                align-items: flex-start;
+            }
+            
+            .logo-img {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+            
+            .logo-text h1 {
+                font-size: 16px;
+            }
+            
+            .hero h2 {
+                font-size: 22px;
+            }
+            
+            .hero p {
+                font-size: 14px;
+            }
+            
+            .section-title h2 {
+                font-size: 22px;
+            }
+            
+            .about, .products, .features, .contact {
+                padding: 40px 15px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-card img {
+                height: 160px;
+            }
+            
+            .price {
+                font-size: 15px;
+            }
+            
+            .footer-content p {
+                font-size: 14px;
+            }
+            
+            .contact-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+            }
+            
+            .contact-card h3 {
+                font-size: 20px;
+            }
+            
+            .contact-details a {
+                font-size: 16px;
+            }
+        }
+
+        /* Touch-friendly improvements */
+        @media (hover: none) {
+            .product-card:hover {
+                transform: none;
+            }
+            
+            .btn:hover {
+                transform: none;
+            }
+            
+            .feature-card:hover {
+                transform: none;
+            }
+            
+            .contact-card:hover {
+                transform: none;
+            }
+        }
+
+        /* Improved touch targets for mobile */
+        @media (max-width: 768px) {
+            nav a {
+                padding: 12px;
+            }
+            
+            .btn {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .product-card .btn {
+                min-height: 40px;
+            }
+
+            .logo-img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%; /* Remove this if you want a square logo */
+                object-fit: contain; /* This ensures your logo scales properly */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Guru Thoogai Naturals Care Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>GURU THOOGAI NATURALS CARE</h1>
+                    <p>Uncompromising Quality at an Affordable Price</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+        <h2>Natural Comfort for Every Woman</h2>
+        <p>Eco-friendly, rash-free, and comfortable organic sanitary products that care for you and the environment.</p>
+        <a href="#products" class="btn">Shop Now</a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="section-title">
+            <h2>About Us</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Guru Thoogai is a proposed startup focused on providing high-quality, eco-friendly, and affordable organic sanitary napkins to address the growing demand for sustainable feminine hygiene products.</p>
+                
+                <ul>
+                    <li>Eco-friendly & biodegradable</li>
+                    <li>Suitable for all skin types</li>
+                    <li>Fragrance-free for sensitive skin</li>
+                    <li>100% Rash-free & breathable design</li>
+                    <li>Natural antibacterial properties</li>
+                    <li>Comfortable for all-day wear</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="MainPic.png" alt="MainPic">
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="features">
+        <div class="features-container">
+            <div class="section-title">
+                <h2>Why Choose Our Products</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Made from biodegradable materials that are gentle on the environment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Skin-Friendly</h3>
+                    <p>Hypoallergenic and free from harmful chemicals, perfect for sensitive skin.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>100% Rash-Free</h3>
+                    <p>Breathable design ensures comfort and prevents skin irritation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Affordable</h3>
+                    <p>High-quality products at prices that don't break the bank.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="products">
+        <div class="products-container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+            </div>
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <div class="product-badge">Best Seller</div>
+                    <img src="cottonImage.png" alt="Cotton Comfort Pads">
+                    <h3>Cotton Comfort Pads</h3>
+                    <p>Soft, comfortable cotton pads for everyday use with excellent absorption.</p>
+                    <div class="price">XL – ₹49 | XXL – ₹60 | XXL Thick – ₹65</div>
+                    <a href="https://forms.gle/MNBrWd7qv5T1eis9A" class="btn">Buy Now</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="organicImage.png" alt="Organic Soft Pads">
+                    <h3>Organic Soft Pads</h3>
+                    <p>Made from 100% organic materials for the most sensitive skin types.</p>
+                    <div class="price">XL – ₹55 | XXL – ₹65</div>
+                    <a href="https://forms.gle/MNBrWd7qv5T1eis9A" class="btn">Buy Now</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <img src="AnionNapkin.png" alt="Anion Pads">
+                    <h3>Anion Thin Pads</h3>
+                    <p>Advanced anion technology for enhanced protection and freshness.</p>
+                    <div class="price">XL – ₹50 | XXL – ₹55 | XXXL – ₹65</div>
+                    <a href="https://forms.gle/MNBrWd7qv5T1eis9A" class="btn">Buy Now</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="BambooNapkin.png" alt="Bamboo Ultra Pads">
+                    <h3>Bamboo Ultra Pads</h3>
+                    <p>Ultra-absorbent bamboo fiber pads with natural antibacterial properties.</p>
+                    <div class="price">XL – ₹65 | XXL – ₹70 | XXXL – ₹75</div>
+                    <a href="https://forms.gle/MNBrWd7qv5T1eis9A" class="btn">Buy Now</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ENHANCED CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <p>Have questions or need assistance? We're here to help!</p>
+            
+            <div class="contact-content">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <div class="contact-details">
+                            <p>For general inquiries and support</p>
+                            <a href="mailto:guruthoogainaturalscare@gmail.com">guruthoogainaturalscare@gmail.com</a>
+                            <p>We'll respond within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <div class="contact-details">
+                            <p>For orders and customer support</p>
+                            <a href="tel:+919715323997">+91 97153 23997</a>
+                            <a href="tel:+919481200570">+91 94812 00570</a>
+                            <p>Mon-Sat, 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="delivery-info">
+                    <h3><i class="fas fa-shipping-fast"></i> Delivery Information</h3>
+                    <p>For order verification and delivery-related queries, our team will contact you directly.</p>
+                    <p>Please ensure your phone number is correct when placing an order.</p>
+                    
+                    <div class="delivery-note">
+                        <p><i class="fas fa-info-circle"></i> Our delivery team will call to verify your order and delivery address before shipping.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>2021 Guru Thoogai Naturals Care <br>Thank You For Shopping with Us!!</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1DAkacyN7a/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/guruthoogai_naturals?igsh=MTZ2ZGMxN2cyZTVxZw=="><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function () {
+            const navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('active');
+            
+            // Change icon based on menu state
+            const icon = this.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                const navMenu = document.querySelector('nav ul');
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    const icon = document.querySelector('.mobile-menu i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                });
+                // Set initial opacity for fade-in effect
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.5s ease';
+            });
+        })
+    </script>
+
+</body>
+</html>
